@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>Mincho_Witch</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Mincho_Witch</label>
+		<description>Mincho_Witch</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<comps>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDefs>
+					<li MayRequire="Ludeon.RimWorld.Royalty">WordOfTrust</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">Convert_YR</li>
+					<li MayRequire="Ludeon.RimWorld.Anomaly">YR_sealingspell</li>
+				</abilityDefs>
+			</li>
+		</comps>
+		<stages>
+		<li>
+			<becomeVisible>false</becomeVisible>
+		</li>
+		</stages>
+	</HediffDef>
+</Defs>

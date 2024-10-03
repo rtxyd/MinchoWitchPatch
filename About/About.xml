@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Patch Fortification</name>
+	<author>然提携夜灯</author>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<packageId>Tset.fortification1</packageId>
+	<description>
+test
+	</description>
+</ModMetaData>
