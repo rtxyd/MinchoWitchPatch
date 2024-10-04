@@ -8,20 +8,14 @@ namespace MinchoWitchPatch
     {
         public HediffDef targetHediff;
         public Dictionary<float, List<AbilityDef>> triggers;
-        //private float[] triggerPoints;
-        public int tickInterval = 500;
 
         public CompProperties_CheckHediffSeverity()
         {
-            this.compClass = typeof(CompCheckHediffSeverity);
+            this.compClass = typeof(CheckHediffSeverity);
         }
         public override void ResolveReferences(HediffDef parentDef)
         {
             base.ResolveReferences(parentDef);
-            //if (triggers != null)
-            //{
-            //    triggerPoints = triggers.Keys.OrderByDescending(t => t).ToArray();
-            //}
         }
     }
 }

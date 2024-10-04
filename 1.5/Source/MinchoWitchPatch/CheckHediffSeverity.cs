@@ -2,7 +2,7 @@
 
 namespace MinchoWitchPatch
 {
-    public class CompCheckHediffSeverity : HediffComp, IExposable
+    public class CheckHediffSeverity : HediffComp
     {
         public CompProperties_CheckHediffSeverity Props => (CompProperties_CheckHediffSeverity)this.props;
         public Hediff targetHediff => this.Pawn.health.hediffSet.GetFirstHediffOfDef(Props.targetHediff);
@@ -22,6 +22,7 @@ namespace MinchoWitchPatch
         {
             if (end)
             {
+                Pawn.health.RemoveHediff(this.parent);
                 return;
             }
             tickCount--;
@@ -65,7 +66,7 @@ namespace MinchoWitchPatch
                 }
             }
         }
-        public void ExposeData()
+        public override void CompExposeData()
         {
             Scribe_Values.Look(ref end, "end", false);
         }
