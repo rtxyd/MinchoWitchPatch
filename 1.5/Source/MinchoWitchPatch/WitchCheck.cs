@@ -18,13 +18,13 @@ namespace MinchoWitchPatch
         {
             foreach (var mw in Find.WorldPawns.AllPawnsAliveOrDead.Where(p => p.kindDef.race.defName == "MinchoWitch").Concat(from a in Find.Maps from b in a.mapPawns.AllHumanlike where b.kindDef.race.defName == "MinchoWitch" select b))
             {
-                if (mw.health.hediffSet.HasHediff(MinchoWitchHediff.Mincho_Witch))
+                if (mw.health.hediffSet.HasHediff(MinchoWitchHediff.MinchoWitch_PsychicCheck))
                 {
                     continue;
                 }
                 else
                 {
-                    mw.health.AddHediff(MinchoWitchHediff.Mincho_Witch);
+                    mw.health.AddHediff(MinchoWitchHediff.MinchoWitch_PsychicCheck);
                 }
             }
             hasCheck = true;

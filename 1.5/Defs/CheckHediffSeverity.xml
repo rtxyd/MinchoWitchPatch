@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<HediffDef>
-		<defName>Mincho_Witch</defName>
+		<defName>MinchoWitch_PsychicCheck</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Mincho_Witch</label>
 		<description>Mincho_Witch</description>
+		<defaultLabelColor>(0.392, 0.678, 0.737)</defaultLabelColor>
 		<initialSeverity>1</initialSeverity>
 		<maxSeverity>6</maxSeverity>
 		<scenarioCanAdd>false</scenarioCanAdd>
