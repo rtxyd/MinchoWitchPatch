@@ -1,12 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Patch MinchoWitch</name>
+	<name>MinchoWitch_AbilityPatch</name>
 	<author>然提携夜灯</author>
 	<supportedVersions>
 		<li>1.5</li>
 	</supportedVersions>
-	<packageId>Tset.MinchoWitch</packageId>
+	<packageId>rtxyd.MinchoWitchPatch</packageId>
+	<modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Royalty</packageId>
+			<displayName>Royalty</displayName>
+		</li>
+		<li>
+			<packageId>erdelf.HumanoidAlienRaces</packageId>
+			<displayName>Humanoid Alien Races 2.0</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/839005762</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>SutSutMan.MinchoTheMintChocoSlimeHARver</packageId>
+			<displayName>Mincho, The Mint Choco Slime ~ HAR ver.</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2477501851</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>gguake.apparelbodyresolver</packageId>
+			<displayName>Apparel BodyType Resolver</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2037354634</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>SutSutMan.MarilyntheMinchoWorshipperWitchHARver</packageId>
+			<displayName>Marilyn the Mincho Worshipper Witch ~ HAR ver.</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2604973449</steamWorkshopUrl>
+		</li>
+	</modDependencies>
 	<description>
-test
+		这个mod让珉巧女巫能在VPE环境下像原版一样通过提升灵能等级自然获取专属技能。
+This mod makes MinchoWitch get their unique abilities normally in Vanilla Psycasts Expanded environment, the way to gain these ability is not changed(by upgrading psychic link, ability will come).
 	</description>
+  	<modVersion IgnoreIfNoMatchingField="True">1.5.0</modVersion>
 </ModMetaData>
