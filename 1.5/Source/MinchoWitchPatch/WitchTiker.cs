@@ -11,6 +11,7 @@ namespace MinchoWitchPatch
             if (ticks < 0)
             {
                 Pawn.health.AddHediff(MinchoWitchHediff.Mincho_Witch_Power);
+                ticks = 1000;
             }
         }
     }

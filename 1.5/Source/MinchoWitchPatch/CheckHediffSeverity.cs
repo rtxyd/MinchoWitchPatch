@@ -6,7 +6,7 @@ namespace MinchoWitchPatch
     {
         public CompProperties_CheckHediffSeverity Props => (CompProperties_CheckHediffSeverity)this.props;
         public Hediff targetHediff => this.Pawn.health.hediffSet.GetFirstHediffOfDef(Props.targetHediff);
-        private int tickCount = 1000;
+        private int tickCount = 10;
         private bool end = false;
         public override void CompPostMake()
         {
@@ -28,7 +28,7 @@ namespace MinchoWitchPatch
             tickCount--;
             if (tickCount < 0 && targetHediff?.Severity > this.parent.Severity)
             {
-                tickCount = 1000;
+                tickCount = 10;
                 if (this.Pawn != null)
                 {
                     if (targetHediff != null)
@@ -65,6 +65,7 @@ namespace MinchoWitchPatch
                     }
                 }
             }
+            Pawn.health.RemoveHediff(this.parent);
         }
         public override void CompExposeData()
         {

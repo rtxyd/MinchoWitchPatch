@@ -4,9 +4,9 @@ using Verse;
 
 namespace MinchoWitchPatch
 {
-    public class CompProperties_WitchTiker : HediffCompProperties
+    public class CompProperties_WitchTicker : HediffCompProperties
     {
-        public CompProperties_WitchTiker()
+        public CompProperties_WitchTicker()
         {
             this.compClass = typeof(WitchTiker);
         }
