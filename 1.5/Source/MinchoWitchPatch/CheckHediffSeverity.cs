@@ -1,12 +1,14 @@
-﻿using Verse;
+﻿using System;
+using Verse;
 
 namespace MinchoWitchPatch
 {
     public class CheckHediffSeverity : HediffComp
     {
-        public CompProperties_CheckHediffSeverity Props => (CompProperties_CheckHediffSeverity)this.props;
-        public Hediff targetHediff => this.Pawn.health.hediffSet.GetFirstHediffOfDef(Props.targetHediff);
-        private int tickCount = 10;
+        public static Random random = new Random();
+        public CompProperties_CheckHediffSeverity Props => (CompProperties_CheckHediffSeverity)base.props;
+        public Hediff targetHediff => base.Pawn.health.hediffSet.GetFirstHediffOfDef(Props.targetHediff);
+        private int tickCount = random.Next(100);
         private bool end = false;
         public override void CompPostMake()
         {
@@ -22,50 +24,55 @@ namespace MinchoWitchPatch
         {
             if (end)
             {
-                Pawn.health.RemoveHediff(this.parent);
                 return;
             }
             tickCount--;
-            if (tickCount < 0 && targetHediff?.Severity > this.parent.Severity)
+            if (tickCount < 0)
             {
-                tickCount = 10;
-                if (this.Pawn != null)
+                tickCount = 2200;
+                if (targetHediff != null && targetHediff.Severity > base.parent.Severity)
                 {
-                    if (targetHediff != null)
+                    CheckAndGainSkill();
+                }
+            }
+        }
+        public void CheckAndGainSkill()
+        {
+            if (base.Pawn != null)
+            {
+                if (targetHediff != null)
+                {
+                    if (targetHediff.Severity <= 6)
                     {
-                        if (targetHediff.Severity <= 6)
+                        for (var i = base.parent.Severity; i <= targetHediff.Severity; i++)
                         {
-                            for (var i = this.parent.Severity; i <= targetHediff.Severity; i++)
+                            if (Props.triggers.TryGetValue(i, out var abilities))
                             {
-                                if (Props.triggers.TryGetValue(i, out var abilities))
+                                foreach (var item in abilities)
                                 {
-                                    foreach (var item in abilities)
-                                    {
-                                        Pawn.abilities.GainAbility(item);
-                                    }
+                                    Pawn.abilities.GainAbility(item);
                                 }
                             }
-                            this.parent.Severity = targetHediff.Severity;
                         }
-                        else
+                        base.parent.Severity = targetHediff.Severity;
+                    }
+                    else
+                    {
+                        for (var i = 1; i <= 6; i++)
                         {
-                            for (var i = 1; i <= 6; i++)
+                            if (Props.triggers.TryGetValue(i, out var abilities))
                             {
-                                if (Props.triggers.TryGetValue(i, out var abilities))
+                                foreach (var item in abilities)
                                 {
-                                    foreach (var item in abilities)
-                                    {
-                                        Pawn.abilities.GainAbility(item);
-                                    }
+                                    Pawn.abilities.GainAbility(item);
                                 }
                             }
-                            this.parent.Severity = 6;
-                            end = true;
                         }
+                        base.parent.Severity = 6;
+                        end = true;
                     }
                 }
             }
-            Pawn.health.RemoveHediff(this.parent);
         }
         public override void CompExposeData()
         {

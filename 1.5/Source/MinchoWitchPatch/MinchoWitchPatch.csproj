@@ -44,9 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WitchTiker.cs" />
     <Compile Include="CheckHediffSeverity.cs" />
-    <Compile Include="CompProperties_WitchTicker.cs" />
     <Compile Include="CompProperties_CheckHediffSeverity.cs" />
     <Compile Include="MinchoWitchHediff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
