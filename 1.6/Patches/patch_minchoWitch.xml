@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationInsert">
+        <xpath>/Defs/AlienRace.AlienBackstoryDef/forcedHediffs/li[text()="MinchoWitch_Normal_Hediff"]</xpath>
+        <value>
+          <li>MinchoWitch_PsychicCheck</li>
+        </value>
+      </li>
+      <li Class="PatchOperationInsert">
+        <xpath>/Defs/AlienRace.ThingDef_AlienRace/comps/li/hediffDefs/li[1]</xpath>
+        <value>
+          <li>MinchoWitch_PsychicCheck</li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

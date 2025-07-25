@@ -1,0 +1,7 @@
+# Changelog for MinchoWitch_Psycasts Patch
+
+1.6.0- bump the version to 1.6
+
+1.5.1- patch fix
+
+1.5.0- first release

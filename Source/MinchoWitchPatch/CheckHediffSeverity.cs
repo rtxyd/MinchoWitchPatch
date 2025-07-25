@@ -29,7 +29,7 @@ namespace MinchoWitchPatch
             tickCount--;
             if (tickCount < 0)
             {
-                tickCount = 2200;
+                tickCount = 1500;
                 if (targetHediff != null && targetHediff.Severity > base.parent.Severity)
                 {
                     CheckAndGainSkill();

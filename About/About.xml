@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>MinchoWitch_AbilityPatch</name>
+	<name>MinchoWitch_Psycasts compatibility patch</name>
 	<author>然提携夜灯</author>
 	<supportedVersions>
 		<li>1.5</li>
+		<li>1.6</li>
 	</supportedVersions>
 	<packageId>rtxyd.MinchoWitchPatch</packageId>
 	<modDependencies>
@@ -33,8 +34,8 @@
 		</li>
 	</modDependencies>
 	<description>
-		这个mod让珉巧女巫能在VPE环境下像原版一样通过提升灵能等级自然获取专属技能。
-This mod makes MinchoWitch get their unique abilities normally in Vanilla Psycasts Expanded environment, the way to gain these ability is not changed(by upgrading psychic link, ability will come).
+		这个mod让珉巧女巫能在VPE环境下像原版一样通过提升灵能等级自然获取专属技能。由于使用了hediff实现，灵能升级后需要 1500ticks 获取新技能（优化tick频率）。
+This mod is a compatibility patch, makes MinchoWitch get their unique abilities normally in Vanilla Psycasts Expanded environment, the way to gain these ability is not changed(by upgrading psychic link, ability will come after about 1500ticks).
 	</description>
-  	<modVersion IgnoreIfNoMatchingField="True">1.5.0</modVersion>
+  	<modVersion IgnoreIfNoMatchingField="True">1.6.0</modVersion>
 </ModMetaData>
