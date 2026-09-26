@@ -1,5 +1,7 @@
 # Changelog for MinchoWitch_Psycasts Patch
 
+1.6.2- update loader folder 1.6
+
 1.6.1a- correct hediff name
 
 1.6.1- fix patch for latest Mincho version
