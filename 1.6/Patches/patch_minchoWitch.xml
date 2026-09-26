@@ -12,7 +12,7 @@
         <xpath>/Defs/AlienRace.ThingDef_AlienRace/comps/li/hediffAndHairs/li[1]</xpath>
         <value>
       		<li>
-      			<hediffDef>Mincho_Mintchoco_Hediff</hediffDef>
+      			<hediffDef>MinchoWitch_PsychicCheck</hediffDef>
       		</li>
         </value>
       </li>
